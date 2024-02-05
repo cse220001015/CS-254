@@ -31,8 +31,10 @@ long long merge(long long a[],int low,int mid,int high){
         ++j;
         ++k;
     }
+    int x=0;
     for(int i=low;i<=high;++i){
-          a[i]=b[i];
+          a[i]=b[x];
+           x++;
     }
     return outpt;
 }
