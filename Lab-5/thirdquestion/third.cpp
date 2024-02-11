@@ -3,9 +3,10 @@ using namespace std;
 int size;
 
 bool is_bipartite(vector<vector<int>>v,int source){
-    vector<int>colour(size,0);
-    //0- not coloured
-    //1-coloured
+    vector<int>colour(size,-1);
+    //-1 means not coloured
+    //1-first colour
+    //0-second colour
     colour[source]=1;
     queue<int>q;
     q.push(source);
@@ -13,7 +14,7 @@ bool is_bipartite(vector<vector<int>>v,int source){
         int frnt=q.front();
         q.pop();
         for(int i=0;i<size;i++){
-            if(v[frnt][i]==1 && colour[i]!=0){
+            if(v[frnt][i]==1 && colour[i]==-1){
                 colour[i]=1-colour[frnt];
                 q.push(i);
             }
