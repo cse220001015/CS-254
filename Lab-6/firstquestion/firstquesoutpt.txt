@@ -1,0 +1,2 @@
+Topological sorting of given Directed Acyclic Graph is: 
+4 5 0 2 3 1 
