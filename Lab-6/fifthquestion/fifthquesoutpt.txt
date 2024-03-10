@@ -1,1 +1,2 @@
-it does not contain Articulation points!
+It has Articulation points!
+It has Articulation edges!
